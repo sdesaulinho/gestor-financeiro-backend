@@ -1,0 +1,12 @@
+stages:
+  - deploy
+
+deploy_to_railway:
+  stage: deploy
+  image: ghcr.io/railwayapp/cli:latest
+  script:
+    - railway up --service=$SVC_ID
+    - ./gradlew build --stacktrace --info
+
+  only:
+    - main  # ou a branch que você quiser usar para deploy
