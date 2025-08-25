@@ -9,10 +9,10 @@ version = '0.0.1-SNAPSHOT'
 description = 'Projeto com a estrutura backend do projeto de gestão de finaças pessoais'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
 }
-
 
 configurations {
 	compileOnly {
